@@ -2,7 +2,7 @@
 
 Note: The goal is to rewrite this style-guide when the [Gamma](https://github.com/cthit/gamma) project is completed and when the common components has been extraced from there. This style guides will be explained with the common components.
 
-<hr>
+---
 
 ## Table of Contents
 
@@ -14,13 +14,13 @@ Note: The goal is to rewrite this style-guide when the [Gamma](https://github.co
 6.  [Code structurer](#code-structure)
 7.  [File naming](#file-naming)
 
-<hr>
+---
 
 ## Code format
 
 - Use [prettier](https://prettier.io/) to format your code.
 
-<hr>
+---
 
 ## Creation of a new project
 
@@ -28,7 +28,7 @@ Note: The goal is to rewrite this style-guide when the [Gamma](https://github.co
 
 If you're unsure about the tools used or ReactJS generally, then you shouldn't be the one setting up the project or initalizing the different tools. Ask someone who has experince. It's often easier to see how someone else does something and try to mimic that instead of starting on your own and trying to follow this styleguide.
 
-<hr>
+---
 
 ## Tools
 
@@ -86,7 +86,7 @@ digIT must strive to make their application support both english and swedish. [R
 
 [lodash](https://lodash.com/) contains a bunch of util functions.
 
-<hr>
+---
 
 ## Different kinds of components
 
@@ -120,7 +120,7 @@ Two examples for what screens can be:
 
 Your web application will contain several use-cases, who in their turn will contain the different screens.
 
-<hr>
+---
 
 ## Folder structure
 
@@ -194,7 +194,7 @@ A folder of use-cases. See [Use-case](#use-case).
 
 The folder that contains App.jsx.
 
-<hr>
+---
 
 ## Code structure
 
@@ -218,7 +218,7 @@ Instead of using this.props or this.state in Components with state, use deconstr
 4.  Imports from the common folder.
 5.  Imports from the common-ui folder.
 
-<hr>
+---
 
 ## File naming
 
