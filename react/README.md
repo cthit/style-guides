@@ -126,6 +126,92 @@ Your web application will contain several use-cases, who in their turn will cont
 
 Within the src folder, there should only be three folders. [Common](#common), [Common-ui](#common-ui), [Use-cases](#use-cases) and [App](#app).
 
+Example
+
+```
+├── app
+│   ├── App.jsx
+│   ├── App.styles.jsx
+│   └── index.js
+├── common
+│   ├── elements
+│   │   └── button
+│   │       ├── Button.element.jsx
+│   │       ├── Button.element.styles.jsx
+│   │       └── index.js
+│   └── views
+│       └── navigation
+│           ├── elements
+│           │   └── navigation-item
+│           │       ├── index.js
+│           │       ├── NavigationItem.element.container.jsx
+│           │       ├── NavigationItem.element.jsx
+│           │       └── NavigationItem.element.styles.jsx
+│           ├── index.js
+│           ├── Navigation.view.container.jsx
+│           ├── Navigation.view.jsx
+│           ├── Navigation.view.styles.jsx
+│           └── Navigation.view.translations.json
+├── common-ui
+│   ├── design
+│   │   ├── Design.styles.jsx
+│   │   └── index.js
+│   ├── layout
+│   │   ├── index.js
+│   │   └── Layout.styles.jsx
+│   └── text
+│       ├── index.js
+│       └── Text.styles.jsx
+└── use-cases
+    └── users
+        ├── index.js
+        ├── screens
+        │   ├── show-users
+        │   │   ├── index.js
+        │   │   ├── ShowUsers.screen.container.jsx
+        │   │   ├── ShowUsers.screen.jsx
+        │   │   ├── ShowUsers.screen.styles.jsx
+        │   │   ├── ShowUsers.screen.translations.json
+        │   │   └── views
+        │   │       └── search
+        │   │           ├── elements
+        │   │           │   └── search-field
+        │   │           │       ├── index.js
+        │   │           │       ├── SearchField.element.jsx
+        │   │           │       └── SearchField.element.styles.jsx
+        │   │           ├── index.js
+        │   │           ├── Search.view.container.jsx
+        │   │           ├── Search.view.jsx
+        │   │           ├── Search.view.styles.jsx
+        │   │           └── Search.view.translations.json
+        │   └── user-details
+        │       ├── index.js
+        │       ├── UserDetails.screen.container.jsx
+        │       ├── UserDetails.screen.jsx
+        │       ├── UserDetails.screen.styles.jsx
+        │       └── UserDetails.screen.translations.json
+        ├── Users.action-creator.jsx
+        ├── Users.actions.jsx
+        ├── Users.jsx
+        ├── Users.reducer.jsx
+        ├── Users.translations.json
+        ├── Users.translations.jsx
+        └── views
+            └── user
+                ├── elements
+                │   └── user-image
+                │       ├── index.js
+                │       ├── UserImage.element.container.jsx
+                │       ├── UserImage.element.jsx
+                │       ├── UserImage.element.styles.jsx
+                │       └── UserImage.translations.json
+                ├── index.js
+                ├── User.view.container.jsx
+                ├── User.view.jsx
+                ├── User.view.styles.jsx
+                └── User.view.translations.json
+```
+
 ### Common
 
 Common should components or other utility files which are used by two or more [Use-case](#use-cases). Common should contain the following folders:
@@ -208,12 +294,12 @@ Try to always use declarative design when programming. If you have to use impera
 
 Instead of using this.props or this.state in Components with state, use deconstructors.
 
-<code>const { glass, godis } = this.props;</code>
+    const { glass, godis } = this.props;
 
 ### Order of imports
 
-1.  From npm e.g. <code>import React from "react";</code>
-2.  Imports from the same folder <code>import {StyledTextField} from "./InputCid.view.styles";</code>
+1.  From npm e.g. `import React from "react";`
+2.  Imports from the same folder `import {StyledTextField} from "./InputCid.view.styles";`
 3.  Imports from the same use-case, app, common or common-ui.
 4.  Imports from the common folder.
 5.  Imports from the common-ui folder.
@@ -224,35 +310,35 @@ Instead of using this.props or this.state in Components with state, use deconstr
 
 For each folder, including use-cases, screens, views and elements, can, but must not, contain these types of files:
 
-<code>index.js</code>
+`index.js`
 
 Should contain the export of the Component file. If there's a container however, it should export that instead. index.js is used to you only have to import the folder, not a specific file inside the folder.
 
-<code>Component.jsx</code>
+`Component.jsx`
 
 The main component.
 
-<code>Component.styles.jsx</code>
+`Component.styles.jsx`
 
 Has all the styling for the component. (Styled-components).
 
-<code>Component.action-creator.jsx</code>
+`Component.action-creator.jsx`
 
 Has all the action-creators for Component. (Redux).
 
-<code>Component.actions.jsx</code>
+`Component.actions.jsx`
 
 Has all the actions for the Component. (Redux).
 
-<code>Component.reducer.jsx</code>
+`Component.reducer.jsx`
 
 Has the reducer for the Component. (Redux).
 
-<code>Component.translations.json</code>
+`Component.translations.json`
 
 Has the translations data for the Component.
 
-<code>Component.translations.jsx</code>
+`Component.translations.jsx`
 
 Only exists for use-cases. Collects all the translations.json from the screens, views and elements.
 
@@ -260,15 +346,15 @@ Only exists for use-cases. Collects all the translations.json from the screens, 
 
 Then you should add what it is after the name of the component. If it's a use-case, Example:
 
-<code>Component.view.jsx</code>
+`Component.view.jsx`
 
-<code>Component.element.styles.jsx</code>
+`Component.element.styles.jsx`
 
-<code>Component.screen.action-creator.jsx</code>
+`Component.screen.action-creator.jsx`
 
-<code>id.generator.js</code>
+`id.generator.js`
 
-<code>translations.loader.js</code>
+`translations.loader.js`
 
 ### File extension
 
