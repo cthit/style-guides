@@ -53,7 +53,7 @@ Two examples for what screens can be:
 
 ### Use-case
 
-Your web application will contain several use-cases, who in their turn will contain the different screens.
+Your web application will contain several use-cases, who in their turn will contain the different screens. A use-case can for example be a 'Users'. This use-case manages the creation, editing, deletion and viewing of users. This is a neat way of structuring your project.
 
 ---
 
@@ -173,7 +173,7 @@ There should only be three subfolders. Common-ui should only contain [Styled-com
 
 - **design**
 
-Basically design that doesn't need to have a component.
+Basically design that doesn't need to have a JS component. E.g. css or styled-components.
 
 - **layout**
 
@@ -194,6 +194,7 @@ The folder that contains App.jsx.
 Example
 
 ```
+├── index.js <-- The starting point
 ├── app
 │   ├── App.jsx
 │   ├── App.styles.jsx
@@ -289,9 +290,45 @@ Use [prettier](https://prettier.io/) to format your code.
 
 ### Declarative design
 
-Try to always use declarative design when programming. If you have to use imperative programming, put it into a component in common/declarative so it can be reused.
+Try to always use declarative design when programming. If you have to use imperative programming, put it into a component in common/declarative so it can be reused. A declarative component has an input and a output, it doesn't render anything to the screen, but merely transform data to the child component. This should be through a [render prop].
+
+GOOD:
+
+```js
+const DoubleIt = ({ number, render }) => {
+  render(number * 2);
+};
+```
+
+```html
+    <DoubleIt number={2} render={(doubled) => (<div>The number is {doubled}</div>)}>
+```
+
+This convention should be used instead of this:
+
+BAD:
+
+```html
+render(){
+    const { number } = this.state;
+
+    return (
+        <div>The number is {number * 2}</div>
+    )
+}
+```
+
+Using declarative design promotes the usage of stateless components.
 
 ---
+
+### Render prop
+
+Read [here](https://reactjs.org/docs/render-props.html) about render props. It's awesome and should be used instead of {children} or Higher order component.
+
+### Stateless components
+
+Try to always use stateless components. They are easier to maintain, faster and easier to test.
 
 ## Tools
 
