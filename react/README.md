@@ -27,7 +27,7 @@ If you're unsure about the tools used or ReactJS generally, then you shouldn't b
 
 ### Element
 
-An element is a stateless and [pure](https://en.wikipedia.org/wiki/Pure_function) component that should only focus on presentational matters. They should take in props, and display it. An element may contain other elements, but not other views, screens or use-cases. An element should not use any hooks since it's [pure](https://en.wikipedia.org/wiki/Pure_function). It should always to a functional component, not a class component.
+An element is a stateless and [pure](https://en.wikipedia.org/wiki/Pure_function) component that should only focus on presentational matters. They should take in props, and display it. An element may contain other elements, but not other views, screens or use-cases. An element should not use any hooks since it's [pure](https://en.wikipedia.org/wiki/Pure_function). It should always be a functional component, never a class component.
 
 Two examples for elements would be the following:
 
