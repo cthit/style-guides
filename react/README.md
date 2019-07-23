@@ -99,11 +99,11 @@ The file extension should either be .json, .jsx or .js. .js should only be used 
 
 ## Folder structure
 
-Within the src folder, there should only be three folders. [Common](#common), [Common-ui](#common-ui), [Use-cases](#use-cases) and [App](#app).
+Within the src folder, there should only be three folders. [Common](#common), [Common-ui](#common-ui), [Use-cases](#use-case) and [App](#app).
 
 ### Common
 
-Common should components or other utility files which are used by two or more [Use-case](#use-cases). Common should contain the following folders:
+Common should components or other utility files which are used by two or more [Use-case](#use-case). Common should contain the following folders:
 
 -   **Views**
 
@@ -154,6 +154,19 @@ A folder that contains _all_ requests. The full structure for the api folder can
 `put.users.api`, has the http requests to change existing users
 
 `props.users.api`, has all the different props that an user object can have. This is used to reduce the possibility of misspelling.
+
+### Subelements and subviews
+
+An element or a view may have sub elements or sub views. Example:
+
+```
+`-- table
+    |-- Table.element.jsx
+    `-- sub-elements
+        `-- table-row
+            |-- TableRow.element.jsx
+            `-- index.js
+```
 
 ### Example
 
