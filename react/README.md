@@ -99,7 +99,7 @@ The file extension should either be .json, .jsx or .js. .js should only be used 
 
 ## Folder structure
 
-Within the src folder, there should only be three folders. [Common](#common), [Common-ui](#common-ui), [Use-cases](#use-case) and [App](#app).
+Within the src folder, there should only be five folders. [Common](#common), [Common-ui](#common-ui), [Use-cases](#use-case), [App](#app) and [api](#api).
 
 ### Common
 
