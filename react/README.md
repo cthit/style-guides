@@ -27,7 +27,7 @@ If you're unsure about the tools used or ReactJS generally, then you shouldn't b
 
 ### Use-case
 
-Your web application will contain several use-cases, who in their turn can contain different screens. A use-case can, for example, be a 'Users'. This use-case manages the creation, editing, deletion, and viewing of users. This is a neat way of structuring your project.
+Your web application will contain several use-cases, who in their turn can contain different screens. A use-case can, for example, be 'Users'. This use-case manages the creation, editing, deletion, and viewing of users. This is a neat way of structuring your project.
 
 ### Screen
 
