@@ -48,13 +48,18 @@ A component is everything that's not a [use-case](#use-case) or [screen](#screen
 
 ## File naming
 
-Each folder, including use-cases, screens, and components, can, but must not, contain these types of files:
+Each folder, including use-cases, screens, and components must contain the following:
 
 * `index.js`, should contain the export of the `*.jsx` file. If there's a container, however, it should export that instead. index.js is used to you only have to import the folder, not a specific file inside the folder.
 
 * `MyUseCase.jsx` / `MyScreen.screen.jsx` / `MyComponent.comp.jsx`: the main element.
 
-* `Element.translations.json`/`Element.(screen/comp).translations.json`: has the translation data for the Element.
+And can contain the following:
+
+* `Element.translations.json`/`Element.screen.translations.json`/`Element.comp.translations.json`: has the translation data for the Element.
+
+* `Element.options.js`/`Element.screen.options.js`/`Element.comp.options.js`: Sometimes there's a need for a lot of options, such as for big forms. Seperating the validation and form data can be a good thing.
+
 
 ### Hooks
 
