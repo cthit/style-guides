@@ -48,7 +48,7 @@ A component is everything that's not a [use-case](#use-case) or [screen](#screen
 
 ## File naming
 
-Each folder, including use-cases, screens, views, and elements, can, but must not, contain these types of files:
+Each folder, including use-cases, screens, and components, can, but must not, contain these types of files:
 
 * `index.js`, should contain the export of the `*.jsx` file. If there's a container, however, it should export that instead. index.js is used to you only have to import the folder, not a specific file inside the folder.
 
