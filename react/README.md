@@ -52,9 +52,9 @@ Each folder, including use-cases, screens, and components, can, but must not, co
 
 * `index.js`, should contain the export of the `*.jsx` file. If there's a container, however, it should export that instead. index.js is used to you only have to import the folder, not a specific file inside the folder.
 
-* `Element.jsx`, the main element.
+* `MyUseCase.jsx` / `MyScreen.screen.jsx` / `MyComponent.comp.jsx`: the main element.
 
-* `Element.translations.json`, has the translation data for the Element.
+* `Element.translations.json`/`Element.(screen/comp).translations.json`: has the translation data for the Element.
 
 ### Hooks
 
