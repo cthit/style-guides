@@ -72,7 +72,7 @@ There are three ways of implementing translations in your app:
 
 1. Have one big `Translations.json` file with all translations.
 2. Have a `CommonTranslations.json` file common translations such "Cancel" or "Save", and one `*.json` file per `use-case`. 
-3. Still have a `CommonTranslation.json`, but have `*.json` everywhere it's needed.
+3. Still have a `CommonTranslation.json`, but have `*.json` everywhere, for every use-case, screen, or component per basis. I.e. a `Button.comp.translations.json` for translations for a Button.
 
 There isn't a correct answer, the important part is just to be consistent. Using `*.json` works great with `react-digit-components`'s `useDigitTranslations()` hook.
 
